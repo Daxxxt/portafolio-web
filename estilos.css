@@ -1,3 +1,13 @@
+/* ============================= */
+/* MODELO DE CAJA GLOBAL */
+/* ============================= */
+
+*{
+box-sizing:border-box; /* controla el tamaño total del elemento */
+margin:0;
+padding:0;
+}
+
 body {
 margin: 0;
 font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -26,15 +36,24 @@ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='htt
 z-index:-1;
 }
 
+/* ============================= */
+/* CONTENEDOR PRINCIPAL */
+/* ============================= */
+
 .container{
 max-width:900px;
-margin:40px auto;
+margin:40px auto; /* margen externo */
+padding:20px; /* padding agregado para evidenciar el box model */
 background:#ffffff;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 30px 100px rgba(0,0,0,0.8);
-border:1px solid rgba(255,255,255,0.1);
+border:2px solid rgba(255,255,255,0.2); /* borde visible */
 }
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
 
 .header{
 position:relative;
@@ -63,8 +82,12 @@ z-index:2;
 background:#fff;
 }
 
+/* ============================= */
+/* CONTENIDO */
+/* ============================= */
+
 .content{
-padding:90px 40px 40px;
+padding:90px 40px 40px; /* padding interno */
 text-align:justify;
 }
 
@@ -86,7 +109,7 @@ text-transform:uppercase;
 
 h2{
 color:#000;
-border-bottom:3px solid #2563EB;
+border-bottom:3px solid #2563EB; /* borde visible */
 padding-bottom:8px;
 margin-top:35px;
 text-transform:uppercase;
@@ -99,26 +122,38 @@ color:#374151;
 font-size:16px;
 }
 
+/* ============================= */
+/* LISTAS */
+/* ============================= */
+
 .section ul{
 background:#f9fafb;
 padding:20px 40px;
 border-radius:12px;
-border-left:5px solid #000;
+border-left:5px solid #000; /* borde lateral */
 list-style-type:'✧ ';
 }
+
+/* ============================= */
+/* HABILIDADES */
+/* ============================= */
 
 .skills span{
 display:inline-block;
 background:#000;
 color:#fff;
-padding:8px 18px;
+padding:10px 20px; /* padding */
 border-radius:4px;
-margin:5px 5px 0 0;
+margin:8px 8px 0 0; /* margen */
 font-size:13px;
 font-weight:500;
 border:1px solid #2563EB;
 transition:0.3s;
 }
+
+/* ============================= */
+/* PROYECTOS */
+/* ============================= */
 
 .projects{
 display:grid;
@@ -128,12 +163,22 @@ gap:20px;
 
 .project{
 background:#ffffff;
-padding:20px;
+padding:25px; /* espacio interno */
+margin:10px 0; /* margen externo */
 border-radius:12px;
-border:1px solid #e5e7eb;
+border:2px solid #2563EB; /* borde */
 box-shadow:0 4px 6px rgba(0,0,0,0.05);
 transition:all 0.3s ease;
 }
+
+.project:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
 
 footer{
 text-align:center;
@@ -141,4 +186,6 @@ padding:25px;
 background:#000;
 color:#fff;
 font-size:13px;
+margin-top:20px;
+border-top:2px solid #2563EB;
 }
