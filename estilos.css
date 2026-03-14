@@ -43,7 +43,7 @@ z-index:-1;
 .container{
 max-width:900px;
 margin:40px auto; /* margen externo */
-padding:20px; /* padding agregado para evidenciar el box model */
+padding:20px; /* padding agregado para espacio interno */
 background:#ffffff;
 border-radius:20px;
 overflow:hidden;
